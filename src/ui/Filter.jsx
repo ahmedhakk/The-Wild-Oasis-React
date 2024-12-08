@@ -11,7 +11,9 @@ const StyledFilter = styled.div`
   gap: 0.4rem;
 `;
 
-const FilterButton = styled.button`
+const FilterButton = styled.button.withConfig({
+  shouldForwardProp: (prop) => prop !== "active",
+})`
   background-color: var(--color-grey-0);
   border: none;
 
@@ -57,7 +59,7 @@ const Filter = ({ filterField, options }) => {
           key={option.value}
           onClick={() => clickHandler(option.value)}
           // active={currentFilter === option.value}
-          active={currentFilter === option.value ? "true" : null}
+          active={currentFilter === option.value ? "true" : null} // pass active for styling not for btn as a class.
           disabled={currentFilter === option.value}
         >
           {option.label}
