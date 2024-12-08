@@ -15,7 +15,7 @@ const StyledDashboardLayout = styled.div`
 function DashboardLayout() {
   const {
     isLoading: isLoadingStays,
-    // stays,
+    stays,
     confirmedStays,
     numDays,
   } = useRecentStays();
