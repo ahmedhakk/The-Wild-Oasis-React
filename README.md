@@ -1,8 +1,8 @@
-# React + Vite
+# The Wild Oasis
+## Check it out using: [The Wild Oasis]()
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Some Screenshots
+![image](https://github.com/user-attachments/assets/9b874111-0307-49e8-aabe-05c9bbcad2c4)
+![image](https://github.com/user-attachments/assets/3d67a949-e4fb-450d-8c55-ffb63acded65)
+![image](https://github.com/user-attachments/assets/99601cfe-c07c-45bf-9925-80bd5a4e4835)
+![image](https://github.com/user-attachments/assets/3d7b14bb-fa42-4f28-9247-1fdd5b85d296)
