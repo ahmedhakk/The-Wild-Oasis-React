@@ -89,6 +89,17 @@ const Toggle = ({ id }) => {
 
   const clickHandler = (e) => {
     // https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect  => More about getBoundingClientRect which help us to get positions about the element
+
+    e.stopPropagation(); // This method prevents the event from bubbling up the DOM tree.
+    /*
+    How Event Propagation Works
+      In the DOM, events follow a propagation pattern:
+
+      Capturing Phase: The event travels down from the root to the target element.
+      Target Phase: The event reaches the target element where the event handler is executed.
+      Bubbling Phase: The event bubbles back up from the target element to the root, invoking event handlers on ancestor elements.
+      By default, React handles events during the bubbling phase (not capturing). e.stopPropagation() halts this bubbling process.
+    */
     const rect = e.target.closest("button").getBoundingClientRect();
     /* console.log(rect);
     // DOMRect {
@@ -119,7 +130,7 @@ const Toggle = ({ id }) => {
 const List = ({ id, children }) => {
   const { openId, position, close } = useContext(MenuContext);
 
-  const ref = useOutsideClick(close);
+  const ref = useOutsideClick(close, false); // false => listen on the bubbling phase + we need to stop the capturing phase in the toggleClick function
 
   if (openId !== id) return null;
 
