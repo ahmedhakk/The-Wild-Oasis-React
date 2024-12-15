@@ -51,7 +51,7 @@ const Discount = styled.div`
 const CabinRow = ({ cabin }) => {
   const { isDeleting, deleteCabin } = useDeleteCabin();
 
-  const { createCabin } = useCreateCabin();
+  const { isCreating, createCabin } = useCreateCabin();
 
   const {
     id: cabinId,
@@ -94,6 +94,7 @@ const CabinRow = ({ cabin }) => {
               <Menus.Button
                 icon={<HiSquare2Stack />}
                 onClick={duplicateCabinHandler}
+                disabled={isCreating}
               >
                 Duplicate
               </Menus.Button>
