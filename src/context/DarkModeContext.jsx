@@ -7,7 +7,13 @@ const DarkModeContext = createContext({
 });
 
 function DarkModeProvider({ children }) {
-  const [isDarkMode, setIsDarkMode] = useLocalStorageState(false, "isDarkMode");
+  // we can check if the user uses the darkmode as a default in his computer or browser using
+  const isDarkOS = window.matchMedia("(prefers-color-scheme: dark)").matches; // it returns true or false
+
+  const [isDarkMode, setIsDarkMode] = useLocalStorageState(
+    isDarkOS,
+    "isDarkMode"
+  );
 
   useEffect(() => {
     if (isDarkMode) {
