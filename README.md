@@ -1,5 +1,5 @@
 # The Wild Oasis
-## Check it out using: [The Wild Oasis](https://prismatic-tarsier-328ad4.netlify.app/)
+## Check it out using: [The Wild Oasis](https://tthewildoasiss.netlify.app/)
 
 #### Some Screenshots
 ![image](https://github.com/user-attachments/assets/9b874111-0307-49e8-aabe-05c9bbcad2c4)
